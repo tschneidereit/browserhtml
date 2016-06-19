@@ -41,7 +41,7 @@ const HelpAction =
   );
 
 export const init =
-  ()/*:[Model, Effects<Action>]*/ =>
+  (): [Model, Effects<Action>] =>
   {
     const [tiles, tilesFx] = Tiles.init();
     const [wallpapers, wallpaperFx] = Wallpapers.init();
@@ -86,7 +86,7 @@ const updateHelp = cursor
   );
 
 export const update =
-  (model/*:Model*/, action/*:Action*/)/*:[Model, Effects<Action>]*/ =>
+  (model: Model, action: Action): [Model, Effects<Action>] =>
   ( action.type === 'Wallpapers'
   ? updateWallpapers(model, action.source)
   : action.type === 'Tiles'
@@ -126,7 +126,7 @@ const readWallpaper = ({src, color}) =>
   );
 
 export const view =
-  ({wallpapers, tiles, help}/*:Model*/, address/*:Address<Action>*/)/*:DOM*/ => {
+  ({wallpapers, tiles, help}: Model, address: Address<Action>): DOM => {
   const activeWallpaper = Wallpapers.active(wallpapers);
   return (
     html.div

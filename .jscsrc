@@ -1,5 +1,4 @@
 {
-  "esnext": true,
   "excludeFiles": [
     "node_modules/**",
     "runtime/**",
@@ -30,7 +29,7 @@
     "beforeOpeningCurlyBrace": true
   },
   "disallowSpacesInFunction": {
-    "beforeOpeningRoundBrace": true
+    "beforeOpeningRoundBrace": true,
   },
   "disallowSpacesInCallExpression": true,
   "disallowMultipleVarDecl": true,

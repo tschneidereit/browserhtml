@@ -14,14 +14,14 @@ import type {Model, Action} from "./help"
 */
 
 export const init =
-  ()/*:[Model, Effects<Action>]*/ =>
+  (): [Model, Effects<Action>] =>
   [ { issuesURI: Config.issues_url
     }
   , Effects.none
   ]
 
 export const update =
-  (model/*:Model*/, action/*:Action*/)/*:[Model, Effects<Action>]*/ =>
+  (model: Model, action: Action): [Model, Effects<Action>] =>
   Unknown.update(model, action)
 
 const styleSheet = Style.createSheet
@@ -46,7 +46,7 @@ const styleSheet = Style.createSheet
   );
 
 export const view =
-  (model/*:Model*/, address/*:Address<Action>*/, isDark/*:boolean*/)/*:DOM*/ =>
+  (model: Model, address: Address<Action>, isDark: boolean): DOM =>
   html.a
   ( { className: 'help'
     , style: Style.mix
