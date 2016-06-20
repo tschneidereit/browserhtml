@@ -12,8 +12,7 @@ import type {Cursor} from "./cursor"
 export type {Cursor}
 */
 
-export const cursor = /*::<from, to, in, out>*/
-  (config/*:Cursor*/)/*:(model:from, action:in) => [from, Effects<out>]*/ => {
+export function cursor<from, to, input, output>(config: Cursor):(model:from, action:input) => [from, Effects<output>] {
   const get = config.get;
   const set = config.set;
   const update = config.update;
