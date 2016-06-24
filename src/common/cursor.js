@@ -5,10 +5,8 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 
-import {Effects} from "reflex";
-
-
-import type {Cursor} from './cursor'
+import { Effects } from 'reflex'
+import type { Cursor } from './cursor'
 export type {Cursor}
 
 
